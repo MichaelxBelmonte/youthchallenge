@@ -1,42 +1,91 @@
-// Versione semplificata per debug 404
+import Hero from '@/components/Hero'
+import FeatureCard from '@/components/FeatureCard'
+import Timeline from '@/components/Timeline'
+import Accordion from '@/components/Accordion'
+import Contact from '@/components/Contact'
+
 export default function HomePage() {
-  console.log('🏠 HomePage component loaded - SIMPLE VERSION')
-  
+  const features = [
+    {
+      iconName: 'brain',
+      title: 'Skills',
+      description: 'Sviluppa competenze tecniche e trasversali attraverso percorsi di apprendimento personalizzati e innovativi.',
+      highlights: [
+        'Micro-corsi specializzati per ogni track',
+        'AI chatbot per supporto personalizzato',
+        'Certificazioni riconosciute dal mercato',
+        'Peer tutoring tra studenti'
+      ]
+    },
+    {
+      iconName: 'users',
+      title: 'Mentor',
+      description: 'Connettiti con professionisti esperti, founder di startup e team universitari per una guida diretta.',
+      highlights: [
+        'Mentor Randstad dedicati',
+        'Tutor YouthLink specializzati',
+        'Network di alumni e innovatori',
+        'Sessioni di mentoring settimanali'
+      ]
+    },
+    {
+      iconName: 'users',
+      title: 'Stage',
+      description: 'Accedi a opportunità di stage e collaborazioni concrete con aziende partner e startup innovative.',
+      highlights: [
+        'Offerte di stage personalizzate',
+        'Collaborazioni con startup partner',
+        'Progetti reali con impatto SDG',
+        'Opportunità di assunzione post-demo'
+      ]
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold mb-6">
-            YouthLink Startup Challenge
-          </h1>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Ecosistema educativo che connette e ispira i giovani attraverso innovazione e tecnologia.
-          </p>
-          <div className="space-x-4">
-            <a href="/login" className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold">
-              Accedi
-            </a>
-            <a href="#features" className="border border-blue-600 hover:bg-blue-600 px-6 py-3 rounded-lg font-semibold">
-              Scopri di più
-            </a>
+    <main className="min-h-screen">
+      {/* Hero Section */}
+      <Hero />
+      
+      {/* Features Section */}
+      <section id="discover" className="py-24 bg-dark-950">
+        <div className="container-custom">
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto mb-16 fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Tre pilastri per il tuo
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600 block">
+                successo imprenditoriale
+              </span>
+            </h2>
+            <p className="text-xl text-dark-300 leading-relaxed">
+              Il nostro ecosistema ti offre tutto ciò di cui hai bisogno per trasformare 
+              le tue idee innovative in startup di successo, con il supporto di partner d'eccellenza.
+            </p>
+          </div>
+          
+          {/* Feature Cards Grid */}
+          <div className="grid md:grid-cols-3 gap-8 fade-in">
+            {features.map((feature, index) => (
+              <FeatureCard
+                key={index}
+                iconName={feature.iconName}
+                title={feature.title}
+                description={feature.description}
+                highlights={feature.highlights}
+              />
+            ))}
           </div>
         </div>
-        
-        <div id="features" className="mt-16 grid md:grid-cols-3 gap-8">
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-xl font-bold mb-3">🧠 Skills</h3>
-            <p>Sviluppa competenze tecniche attraverso percorsi personalizzati.</p>
-          </div>
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-xl font-bold mb-3">👥 Mentor</h3>
-            <p>Connettiti con mentor esperti del settore.</p>
-          </div>
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-xl font-bold mb-3">🚀 Stage</h3>
-            <p>Opportunità di stage in aziende innovative.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+      </section>
+      
+      {/* Timeline Section */}
+      <Timeline />
+      
+      {/* FAQ Section */}
+      <Accordion />
+      
+      {/* Contact Section */}
+      <Contact />
+    </main>
   )
 } 
