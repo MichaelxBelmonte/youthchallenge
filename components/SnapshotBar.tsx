@@ -5,10 +5,10 @@ import { motion } from 'framer-motion'
 
 export default function SnapshotBar() {
   const steps = [
-    { number: "20", label: "target schools" },
-    { number: "5–10", label: "teams" },
+    { number: "20", label: "scuole target" },
+    { number: "5–10", label: "team" },
     { number: "€500", label: "grant" },
-    { number: "4", label: "month sprint" }
+    { number: "4", label: "mesi sprint" }
   ]
 
   return (

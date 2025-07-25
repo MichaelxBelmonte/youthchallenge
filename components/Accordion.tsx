@@ -14,28 +14,28 @@ export default function Accordion() {
 
   const faqs: FAQItem[] = [
     {
-      question: "Who can apply?",
-      answer: "Students in the **final 3 years** of **scientific high schools or technical institutes** within 30 km of Milan (other regions will open in future editions)."
+      question: "Chi può candidarsi?",
+      answer: "Studenti degli **ultimi 3 anni** di **licei scientifici o istituti tecnici** situati fino a 30 km da Milano (altre regioni si apriranno nelle edizioni future)."
     },
     {
-      question: "What are the requirements?",
-      answer: "Be a student in your final 3 years of scientific/technical high school in the Milan area, have passion for innovation and be ready to dive into an entrepreneurial project."
+      question: "Quali sono i requisiti?",
+      answer: "Essere studenti degli ultimi 3 anni di liceo scientifico/istituto tecnico nell'area milanese, avere passione per l'innovazione e essere pronti a tuffarsi in un progetto imprenditoriale."
     },
     {
-      question: "How does selection work?",
-      answer: "Online application → selection interviews → team formation. We'll select 6-10 teams from partner schools for the full programme."
+      question: "Come funziona la selezione?",
+      answer: "Candidatura online → colloqui di selezione → formazione team. Selezioneremo 6-10 team dalle scuole partner per il programma completo."
     },
     {
-      question: "What support will we get?",
-      answer: "Each team gets YouthLink mentors, startup partners and Randstad support for professional development. Plus workshops, online resources and co-working spaces."
+      question: "Che supporto riceveremo?",
+      answer: "Ogni team avrà mentor YouthLink, partner startup e supporto Randstad per lo sviluppo professionale. Inoltre workshop, risorse online e spazi di co-working."
     },
     {
-      question: "How can we use the €500 grant?",
-      answer: "For prototype development, marketing, digital tools, event participation or other project-related expenses. Must be documented according to programme guidelines."
+      question: "Come possiamo usare il grant di €500?",
+      answer: "Per sviluppo del prototipo, marketing, strumenti digitali, partecipazione a eventi o altre spese legate al progetto. Deve essere documentato secondo le linee guida del programma."
     },
     {
-      question: "Where can I find more info?",
-      answer: "Visit our website, follow us on social media or contact us directly at info@youthlink.it. We'll regularly publish updates on the programme and next steps."
+      question: "Dove trovo più informazioni?",
+      answer: "Visita il nostro sito web, seguici sui social media o contattaci direttamente a info@youthlink.it. Pubblicheremo regolarmente aggiornamenti sul programma e sui prossimi step."
     }
   ]
 
@@ -54,10 +54,10 @@ export default function Accordion() {
           viewport={{ once: true, margin: "-100px" }}
         >
           <h2 className="text-4xl md:text-5xl font-heading font-semibold text-white mb-4">
-            <span className="text-gradient">FAQ</span>
+            <span className="text-gradient">Domande Frequenti</span>
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">
-            Everything you need to know about Startup Youth Challenge 2026
+            Tutto quello che devi sapere sul Startup Youth Challenge 2026
           </p>
         </motion.div>
 

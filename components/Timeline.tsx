@@ -33,10 +33,10 @@ export default function Timeline() {
           viewport={{ once: true, margin: "-100px" }}
         >
           <h2 className="text-4xl md:text-5xl font-heading font-semibold text-white mb-4">
-            Programme <span className="text-gradient">Roadmap</span>
+            Roadmap del <span className="text-gradient">Programma</span>
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">
-            Complete journey from scouting to final demo, with clear milestones and constant support
+            Il percorso completo dallo scouting alla demo finale, con milestone chiare e supporto costante
           </p>
         </motion.div>
 
@@ -109,12 +109,12 @@ export default function Timeline() {
                         animate={{ scale: [1, 1.05, 1] }}
                         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                       >
-                        YOU ARE HERE
+                        SEI QUI
                       </motion.span>
                     )}
                     {isCompleted && (
                       <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full font-medium">
-                        COMPLETED
+                        COMPLETATO
                       </span>
                     )}
                   </div>
