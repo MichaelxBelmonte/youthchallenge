@@ -1,0 +1,74 @@
+[
+  {
+    "id": "brand-launch",
+    "date": "Sep 2025",
+    "title": "Brand Launch",
+    "description": "Lancio ufficiale del brand «Startup Youth Challenge»",
+    "status": "completed",
+    "icon": "rocket"
+  },
+  {
+    "id": "outreach",
+    "date": "Oct 2025", 
+    "title": "Outreach & Partnership",
+    "description": "Outreach e MoU con scuole e partner (obiettivo 5-10)",
+    "status": "in-progress",
+    "icon": "handshake"
+  },
+  {
+    "id": "webinar",
+    "date": "Nov 2025",
+    "title": "Public Webinar",
+    "description": "Webinar pubblico e FAQ sui regolamenti",
+    "status": "pending",
+    "icon": "presentation"
+  },
+  {
+    "id": "selection",
+    "date": "Dec 2025",
+    "title": "Student Selection",
+    "description": "Selezione studenti: 30+ candidati → 6-10 team",
+    "status": "pending",
+    "icon": "users"
+  },
+  {
+    "id": "kickoff",
+    "date": "15 Jan 2026",
+    "title": "Kick-off Day",
+    "description": "Giornata di avvio ufficiale del programma",
+    "status": "pending",
+    "icon": "flag"
+  },
+  {
+    "id": "alpha",
+    "date": "Feb 2026",
+    "title": "Alpha Checkpoint",
+    "description": "Primo checkpoint con prototipo iniziale",
+    "status": "pending",
+    "icon": "code"
+  },
+  {
+    "id": "beta",
+    "date": "Apr 2026",
+    "title": "Beta Checkpoint",
+    "description": "Checkpoint beta + serata community \"Randstad Box\"",
+    "status": "pending",
+    "icon": "test-tube"
+  },
+  {
+    "id": "demo-day",
+    "date": "20-21 May 2026",
+    "title": "Hackathon & Demo Day",
+    "description": "Hackathon finale e Demo Day con giuria e premi",
+    "status": "pending",
+    "icon": "trophy"
+  },
+  {
+    "id": "impact-report",
+    "date": "Jun 2026",
+    "title": "Impact Report",
+    "description": "Report di impatto finale e offerte di stage",
+    "status": "pending",
+    "icon": "chart"
+  }
+] 
