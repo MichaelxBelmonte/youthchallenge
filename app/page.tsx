@@ -5,6 +5,8 @@ import Accordion from '@/components/Accordion'
 import Contact from '@/components/Contact'
 
 export default function HomePage() {
+  console.log('🏠 HomePage component loaded')
+  
   const features = [
     {
       iconName: 'brain',
