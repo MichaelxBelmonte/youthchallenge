@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description: 'Ecosistema educativo decentralizzato che connette, ispira e guida i giovani di 12-22 anni attraverso media digitali, eventi dal vivo e strumenti AI.',
   keywords: ['YouthLink', 'Startup Youth Challenge', 'Randstad', 'educazione', 'giovani', 'startup'],
   authors: [{ name: 'YouthLink Team' }],
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export function generateViewport() {
