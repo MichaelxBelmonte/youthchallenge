@@ -5,7 +5,7 @@ export interface RoadmapItem {
   date: string
   title: string
   description: string
-  status: 'completed' | 'in-progress' | 'pending'
+  status: 'completed' | 'in-progress' | 'current' | 'pending'
   icon: string
 }
 

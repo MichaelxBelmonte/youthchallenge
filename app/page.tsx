@@ -1,6 +1,6 @@
 import Hero from '@/components/Hero'
 import WhyJoin from '@/components/WhyJoin'
-import ProgrammeSnapshot from '@/components/ProgrammeSnapshot'
+import SnapshotBar from '@/components/SnapshotBar'
 import Timeline from '@/components/Timeline'
 import Accordion from '@/components/Accordion'
 import Contact from '@/components/Contact'
@@ -15,8 +15,8 @@ export default function HomePage() {
       {/* Why Join Section */}
       <WhyJoin />
       
-      {/* Programme Snapshot */}
-      <ProgrammeSnapshot />
+      {/* Snapshot Bar */}
+      <SnapshotBar />
       
       {/* Timeline/Roadmap Section */}
       <Timeline />

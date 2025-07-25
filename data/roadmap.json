@@ -1,74 +1,74 @@
 [
   {
     "id": "brand-launch",
-    "date": "Sep 2025",
+    "date": "Sep 25",
     "title": "Brand Launch",
     "description": "Lancio ufficiale del brand «Startup Youth Challenge»",
     "status": "completed",
     "icon": "rocket"
   },
   {
-    "id": "outreach",
-    "date": "Oct 2025", 
-    "title": "Outreach & Partnership",
+    "id": "school-outreach",
+    "date": "Oct 25", 
+    "title": "School Outreach & MoU",
     "description": "Outreach e MoU con scuole e partner (obiettivo 5-10)",
-    "status": "in-progress",
-    "icon": "handshake"
-  },
-  {
-    "id": "webinar",
-    "date": "Nov 2025",
-    "title": "Public Webinar",
-    "description": "Webinar pubblico e FAQ sui regolamenti",
-    "status": "pending",
-    "icon": "presentation"
-  },
-  {
-    "id": "selection",
-    "date": "Dec 2025",
-    "title": "Student Selection",
-    "description": "Selezione studenti: 30+ candidati → 6-10 team",
-    "status": "pending",
+    "status": "completed",
     "icon": "users"
   },
   {
+    "id": "webinar-rules",
+    "date": "Nov 25",
+    "title": "Webinar + Rules",
+    "description": "Webinar informativo e pubblicazione regolamento completo",
+    "status": "completed",
+    "icon": "presentation"
+  },
+  {
+    "id": "student-selection",
+    "date": "Dec 25",
+    "title": "Student Selection",
+    "description": "Processo di selezione studenti e formazione team",
+    "status": "completed",
+    "icon": "target"
+  },
+  {
     "id": "kickoff",
-    "date": "15 Jan 2026",
-    "title": "Kick-off Day",
-    "description": "Giornata di avvio ufficiale del programma",
-    "status": "pending",
-    "icon": "flag"
+    "date": "15 Jan 26",
+    "title": "Kick-off",
+    "description": "Inizio ufficiale del programma con tutti i team selezionati",
+    "status": "current",
+    "icon": "rocket"
   },
   {
-    "id": "alpha",
-    "date": "Feb 2026",
-    "title": "Alpha Checkpoint",
-    "description": "Primo checkpoint con prototipo iniziale",
+    "id": "alpha-phase",
+    "date": "Feb 26",
+    "title": "Alpha Phase",
+    "description": "Sviluppo iniziale dei progetti e prime milestone",
     "status": "pending",
-    "icon": "code"
+    "icon": "lightbulb"
   },
   {
-    "id": "beta",
-    "date": "Apr 2026",
-    "title": "Beta Checkpoint",
-    "description": "Checkpoint beta + serata community \"Randstad Box\"",
+    "id": "beta-phase",
+    "date": "Apr 26",
+    "title": "Beta Phase", 
+    "description": "Raffinamento progetti e preparazione demo",
     "status": "pending",
-    "icon": "test-tube"
+    "icon": "award"
   },
   {
     "id": "demo-day",
-    "date": "20-21 May 2026",
-    "title": "Hackathon & Demo Day",
-    "description": "Hackathon finale e Demo Day con giuria e premi",
+    "date": "20-21 May 26",
+    "title": "Demo Day",
+    "description": "Presentazione finale presso Randstad HQ Milano",
     "status": "pending",
     "icon": "trophy"
   },
   {
     "id": "impact-report",
-    "date": "Jun 2026",
-    "title": "Impact Report",
-    "description": "Report di impatto finale e offerte di stage",
+    "date": "Jun 26",
+    "title": "Impact Report & Stage Offers",
+    "description": "Report finale dell'impatto e offerte di stage per i migliori",
     "status": "pending",
-    "icon": "chart"
+    "icon": "heart"
   }
 ] 

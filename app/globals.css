@@ -1,44 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import '@fontsource/space-grotesk/400.css';
+@import '@fontsource/space-grotesk/600.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import '../styles/animations.css';
 
 @layer base {
-  html {
-    font-family: 'Inter', sans-serif;
+  body {
+    @apply bg-black text-white;
+    font-family: 'Inter', system-ui, sans-serif;
   }
   
-  body {
-    @apply bg-dark-950 text-white;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 600;
   }
 }
 
 @layer components {
   .container-custom {
-    @apply mx-auto max-w-[1280px] px-6;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-  
-  .fade-in {
-    @apply animate-fade-in;
-  }
-  
-  .scale-hover {
-    @apply transition-transform duration-300 hover:scale-105;
-  }
-  
+
   .btn-primary {
-    @apply bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 focus:ring-2 focus:ring-primary-300 focus:outline-none;
+    @apply inline-flex items-center justify-center px-6 py-3 bg-primaryBlue text-white font-medium rounded-lg transition-all duration-200 hover:bg-accentBlue hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-offset-2 focus:ring-offset-black;
   }
-  
+
   .btn-secondary {
-    @apply bg-transparent border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 focus:ring-2 focus:ring-primary-300 focus:outline-none;
+    @apply inline-flex items-center justify-center px-6 py-3 bg-transparent border-2 border-primaryBlue text-primaryBlue font-medium rounded-lg transition-all duration-200 hover:bg-primaryBlue hover:text-white hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-offset-2 focus:ring-offset-black;
   }
-  
+
   .card {
-    @apply bg-dark-900 rounded-xl p-6 border border-dark-800 transition-all duration-300;
+    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl;
   }
-  
+
+  .card-white {
+    @apply bg-white text-black rounded-xl shadow-lg;
+  }
+
   .card-hover {
-    @apply card hover:border-primary-500/50 hover:shadow-lg hover:shadow-primary-500/10;
+    @apply transition-all duration-300 hover:scale-105;
+  }
+
+  .section-padding {
+    @apply py-20 lg:py-24;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primaryBlue to-accentBlue bg-clip-text text-transparent;
   }
 } 

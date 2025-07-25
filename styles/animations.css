@@ -1,0 +1,78 @@
+/* Custom animations for Startup Youth Challenge */
+
+.animate-gradient {
+  background: linear-gradient(45deg, #0066FF, #00A9FF, #0066FF, #00A9FF);
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fade in up animation with stagger */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.fade-in-up:nth-child(1) { animation-delay: 0.1s; }
+.fade-in-up:nth-child(2) { animation-delay: 0.2s; }
+.fade-in-up:nth-child(3) { animation-delay: 0.3s; }
+.fade-in-up:nth-child(4) { animation-delay: 0.4s; }
+.fade-in-up:nth-child(5) { animation-delay: 0.5s; }
+
+/* Pulsing chevron */
+.pulse-chevron {
+  animation: pulse-chevron 2s ease-in-out infinite;
+}
+
+@keyframes pulse-chevron {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translateY(0px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(5px);
+  }
+}
+
+/* Card hover effects */
+.card-hover-blue {
+  transition: all 0.3s ease;
+}
+
+.card-hover-blue:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 102, 255, 0.2);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(45deg, #0066FF, #00A9FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Reveal on scroll */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+} 

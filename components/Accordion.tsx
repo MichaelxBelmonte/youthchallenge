@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 interface FAQItem {
   question: string
@@ -13,28 +14,28 @@ export default function Accordion() {
 
   const faqs: FAQItem[] = [
     {
-      question: "Chi può candidarsi?",
-      answer: "Studenti degli **ultimi tre anni** di **licei scientifici o istituti tecnici** situati fino a 30 km da Milano (altre regioni si apriranno nelle edizioni future)."
+      question: "Who can apply?",
+      answer: "Students in the **final 3 years** of **scientific high schools or technical institutes** within 30 km of Milan (other regions will open in future editions)."
     },
     {
-      question: "Quali sono i requisiti per partecipare?",
-      answer: "Essere studenti degli ultimi tre anni di scuole superiori scientifiche o tecniche nell'area milanese, avere passione per l'innovazione e la voglia di mettersi in gioco in un progetto imprenditoriale."
+      question: "What are the requirements?",
+      answer: "Be a student in your final 3 years of scientific/technical high school in the Milan area, have passion for innovation and be ready to dive into an entrepreneurial project."
     },
     {
-      question: "Come funziona il processo di selezione?",
-      answer: "Il processo prevede una prima fase di candidatura online, seguita da colloqui di selezione e formazione dei team. Verranno selezionati 6-10 team dalle scuole partner per partecipare al programma completo."
+      question: "How does selection work?",
+      answer: "Online application → selection interviews → team formation. We'll select 6-10 teams from partner schools for the full programme."
     },
     {
-      question: "Che tipo di supporto riceveremo?",
-      answer: "Ogni team avrà accesso a mentor YouthLink, partner startup del settore e supporto Randstad per lo sviluppo professionale. Include anche workshop, risorse online e spazi di co-working."
+      question: "What support will we get?",
+      answer: "Each team gets YouthLink mentors, startup partners and Randstad support for professional development. Plus workshops, online resources and co-working spaces."
     },
     {
-      question: "Come viene utilizzato il grant di €500?",
-      answer: "Il grant può essere utilizzato per sviluppo del prototipo, marketing, strumenti digitali, partecipazione a eventi o altre spese legate al progetto. Deve essere rendicontato secondo le linee guida del programma."
+      question: "How can we use the €500 grant?",
+      answer: "For prototype development, marketing, digital tools, event participation or other project-related expenses. Must be documented according to programme guidelines."
     },
     {
-      question: "Dove posso trovare più informazioni?",
-      answer: "Visita il nostro sito web, seguici sui social media o contattaci direttamente a info@youthlink.it. Pubblicheremo regolarmente aggiornamenti sul programma e sui prossimi step."
+      question: "Where can I find more info?",
+      answer: "Visit our website, follow us on social media or contact us directly at info@youthlink.it. We'll regularly publish updates on the programme and next steps."
     }
   ]
 
@@ -43,47 +44,63 @@ export default function Accordion() {
   }
 
   return (
-    <section className="py-20 bg-dark-800">
+    <section className="section-padding bg-black">
       <div className="container-custom">
-        <div className="text-center mb-16 fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Domande Frequenti
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <h2 className="text-4xl md:text-5xl font-heading font-semibold text-white mb-4">
+            <span className="text-gradient">FAQ</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Tutto quello che devi sapere sul Startup Youth Challenge 2026
+          <p className="text-white/70 max-w-2xl mx-auto text-lg">
+            Everything you need to know about Startup Youth Challenge 2026
           </p>
-        </div>
+        </motion.div>
 
-        <div className="max-w-3xl mx-auto space-y-4 fade-in">
+        <div className="max-w-3xl mx-auto space-y-4">
           {faqs.map((faq, index) => (
-            <div
+            <motion.div
               key={index}
-              className="card border border-dark-600 hover:border-primary-500/50 transition-colors"
+              className="card border border-white/10 hover:border-primaryBlue/50 transition-colors"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-100px" }}
             >
               <button
                 className="w-full px-6 py-6 text-left flex items-center justify-between group"
                 onClick={() => toggleAccordion(index)}
               >
-                <h3 className="text-lg font-semibold text-white group-hover:text-primary-300 transition-colors">
+                <h3 className="text-lg font-heading font-semibold text-white group-hover:text-primaryBlue transition-colors">
                   {faq.question}
                 </h3>
                 <ChevronDown
-                  className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${
+                  className={`w-5 h-5 text-white/60 transition-transform duration-200 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                 />
               </button>
               
               {openIndex === index && (
-                <div className="px-6 pb-6 border-t border-dark-600">
-                  <div className="pt-4 text-gray-300 leading-relaxed">
+                <motion.div 
+                  className="px-6 pb-6 border-t border-white/10"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="pt-4 text-white/80 leading-relaxed">
                     {faq.answer.split('**').map((part, i) => 
-                      i % 2 === 0 ? part : <strong key={i} className="text-primary-300">{part}</strong>
+                      i % 2 === 0 ? part : <strong key={i} className="text-primaryBlue">{part}</strong>
                     )}
                   </div>
-                </div>
+                </motion.div>
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
