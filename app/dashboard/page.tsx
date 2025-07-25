@@ -66,7 +66,7 @@ export default function DashboardPage() {
     checkUser()
     loadTeams()
     loadNotes()
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const checkUser = async () => {
     console.log('🔍 Dashboard: Controllo utente iniziato')
