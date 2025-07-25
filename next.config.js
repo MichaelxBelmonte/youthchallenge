@@ -6,6 +6,9 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   trailingSlash: false,
+  experimental: {
+    appDir: true,
+  },
   images: {
     remotePatterns: [
       {
