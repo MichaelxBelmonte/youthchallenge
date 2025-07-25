@@ -8,7 +8,9 @@ export const metadata: Metadata = {
   keywords: ['YouthLink', 'Startup Youth Challenge', 'Randstad', 'educazione', 'giovani', 'startup'],
   authors: [{ name: 'YouthLink Team' }],
   icons: {
-    icon: '/favicon.ico',
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
 }
 
